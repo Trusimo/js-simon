@@ -30,7 +30,7 @@ numericasuali.push(n1, n2, n3, n4, n5);
 console.log(numericasuali);
 
 // creo il timer con la condizione di far sparire i numeri allo scadere
-let secondi = 5;
+let secondi = 30;
 countdownInterval = setInterval(function () {
 
     secondi--;
