@@ -45,13 +45,13 @@ countdownInterval = setInterval(function () {
         document.getElementById("n4").style.display = 'none';
         document.getElementById("n5").style.display = 'none';
 
-        const numeriutente = [];
         for (let i=0; i<5; i++) {
             const usernumber = prompt("Inserisci il numero");
-            numeriutente.push(parseInt(usernumber));
                 // come controllo se i numeri corrispondono?
-            if (numeriutente === numericasuali ) {
-                alert("vittoria");
+            if (numericasuali.includes(parseInt(usernumber)) ) {
+                alert("Bravo, questo numero c'era!");
+            } else {
+                alert("Sbagliato!")
             }
         }
     }
