@@ -48,7 +48,7 @@ countdownInterval = setInterval(function () {
         const numeriutente = [];
         for (let i=0; i<5; i++) {
             const usernumber = prompt("Inserisci il numero");
-            numeriutente.push(usernumber);
+            numeriutente.push(parseInt(usernumber));
                 // come controllo se i numeri corrispondono?
             if (numeriutente === numericasuali ) {
                 alert("vittoria");
