@@ -12,11 +12,22 @@
 // da indovinare sono stati individuati.
 
 // Creo i 5 numeri
-document.getElementById("n1").innerHTML = (Math.floor(Math.random() * 100));
-document.getElementById("n2").innerHTML = (Math.floor(Math.random() * 100));
-document.getElementById("n3").innerHTML = (Math.floor(Math.random() * 100));
-document.getElementById("n4").innerHTML = (Math.floor(Math.random() * 100));
-document.getElementById("n5").innerHTML = (Math.floor(Math.random() * 100));
+const numericasuali = [];
+
+let n1 = (Math.floor(Math.random() * 100));
+let n2 = (Math.floor(Math.random() * 100));
+let n3 = (Math.floor(Math.random() * 100));
+let n4 = (Math.floor(Math.random() * 100));
+let n5 = (Math.floor(Math.random() * 100));
+
+document.getElementById("n1").innerHTML = n1;
+document.getElementById("n2").innerHTML = n2;
+document.getElementById("n3").innerHTML = n3;
+document.getElementById("n4").innerHTML = n4;
+document.getElementById("n5").innerHTML = n5;
+
+numericasuali.push(n1, n2, n3, n4, n5);
+console.log(numericasuali);
 
 // creo il timer con la condizione di far sparire i numeri allo scadere
 let secondi = 5;
@@ -34,9 +45,12 @@ countdownInterval = setInterval(function () {
         document.getElementById("n4").style.display = 'none';
         document.getElementById("n5").style.display = 'none';
 
+        const numeriutente = [];
         for (let i=0; i<5; i++) {
             const usernumber = prompt("Inserisci il numero");
-            if (usernumber === n1 || n2 || n3 || n4 || n5) {
+            numeriutente.push(usernumber);
+                // come controllo se i numeri corrispondono?
+            if (numeriutente === numericasuali ) {
                 alert("vittoria");
             }
         }
