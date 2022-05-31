@@ -18,8 +18,8 @@ document.getElementById("n3").innerHTML = (Math.floor(Math.random() * 100));
 document.getElementById("n4").innerHTML = (Math.floor(Math.random() * 100));
 document.getElementById("n5").innerHTML = (Math.floor(Math.random() * 100));
 
-// creo il timer
-let secondi = 30;
+// creo il timer con la condizione di far sparire i numeri allo scadere
+let secondi = 5;
 countdownInterval = setInterval(function () {
 
     secondi--;
@@ -28,5 +28,17 @@ countdownInterval = setInterval(function () {
 
     if (secondi === 0) {
         clearInterval(countdownInterval);
+        document.getElementById("n1").style.display = 'none';
+        document.getElementById("n2").style.display = 'none';
+        document.getElementById("n3").style.display = 'none';
+        document.getElementById("n4").style.display = 'none';
+        document.getElementById("n5").style.display = 'none';
+
+        for (let i=0; i<5; i++) {
+            const usernumber = prompt("Inserisci il numero");
+            if (usernumber === n1 || n2 || n3 || n4 || n5) {
+                alert("vittoria");
+            }
+        }
     }
     }, 1000);
